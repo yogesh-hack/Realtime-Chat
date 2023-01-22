@@ -3,7 +3,7 @@ function main() {
     const mongoose = require("mongoose");
 
     // Set up default mongoose connection
-    const mongoDB = "mongodb+srv://yogesh:9911208930@cluster0.yjdbx2j.mongodb.net/users";
+    const mongoDB = process.env.MONGO_CONNECTION_URL;
     mongoose.connect(mongoDB, { useNewUrlParser: true, useUnifiedTopology: true });
 
     // Get the default connection
